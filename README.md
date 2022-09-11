@@ -9,7 +9,7 @@ O projeto visa conectar trabalhadores independentes com potenciais clientes, ond
 *   [Site no Heroku](https://gerenciamento-servicos.herokuapp.com) :robot:
 
 ## :round_pushpin: Objetivos
-O cliente deve ser capaz de fazer o cadastramento dos seus dados pessoais, tais como Nome Completo, CPF, qual a sua ocupação e uma senha para ter acesso ao sistema. Eles também devem ser capazes de visualizar e contratar o serviço (o sistema não deve permitir uma contratação de serviço em um horário já ocupado por outro cliente.). Além disso, para que o sistema tenha segurança para seus usuários, deve existir o
+O cliente deve ser capaz de fazer o cadastramento dos seus dados pessoais, tais como Nome Completo, CPF e uma senha para ter acesso ao sistema. Eles também devem ser capazes de visualizar e contratar o serviço (o sistema não deve permitir uma contratação de serviço em um horário já ocupado por outro cliente.). Além disso, para que o sistema tenha segurança para seus usuários, deve existir o
 usuário administrador capaz de fazer uma pesquisa no sistema tanto para cliente quanto para trabalhador, ser capaz de visualizar, remover usuário e visualizar todas as contratações de um usuário a fim de evitar crimes por parte dos mesmos.
 ## :hammer_and_wrench: Tecnologias Usadas
 ### [Ruby](https://www.ruby-lang.org/pt/)
