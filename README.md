@@ -1,4 +1,4 @@
-[![Codacy Badge](https://app.codacy.com/gh/esServicosGerais/general-Services-System/dashboard)](https://app.codacy.com/gh/esServicosGerais/general-Services-System/dashboard)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/69114b9aa610439881a3b4a0237b14b9)](https://app.codacy.com/gh/esServicosGerais/general-Services-System/dashboard)
 # Sistema de Gerenciamento de Serviços
 ## :octocat: Integrantes
 [Breno barkokedas](https://github.com/brenomacedodm) | [Jenilson Moraes](https://github.com/JenilsonMoraes) | [Jonatha Matos](https://github.com/Matos-Jonathan) | [Jose Everton](https://github.com/EvertonTenorio) | [Jose Luciano](https://github.com/jlalvescarvalho)
