@@ -1,7 +1,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/69114b9aa610439881a3b4a0237b14b9)](https://app.codacy.com/gh/esServicosGerais/general-Services-System/dashboard)
 # Sistema de Gerenciamento de Serviços
 ## :octocat: Integrantes
-[Breno barkokedas](https://github.com/brenomacedodm) | [Jenilson Moraes](https://github.com/JenilsonMoraes) | [Jonathan Matos](https://github.com/Matos-Jonathan) | [Jose Everton](https://github.com/EvertonTenorio) | [Jose Luciano](https://github.com/jlalvescarvalho)
+[Breno Barkokebas](https://github.com/brenomacedodm) | [Jenilson Moraes](https://github.com/JenilsonMoraes) | [Jonathan Matos](https://github.com/Matos-Jonathan) | [Jose Everton](https://github.com/EvertonTenorio) | [Jose Luciano](https://github.com/jlalvescarvalho)
 ## :page_with_curl: Sobre o Projeto
 Projeto para implementação de um SaaS em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrado pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2021.2 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
 O projeto visa conectar trabalhadores independentes com potenciais clientes, onde eles vão poder dar uma explicação sobre o serviço, horário de início e término do serviço, colocar preço e etc.
