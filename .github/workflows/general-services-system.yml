@@ -52,5 +52,5 @@ jobs:
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
           WITH_COVERAGE: true
           DISABLE_SPRING: 1
-        run:
+        run: |
           bundle exec rails db:prepare
