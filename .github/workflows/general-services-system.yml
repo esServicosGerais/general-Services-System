@@ -1,4 +1,4 @@
-name: CI
+name: general-services-system
 on: [push, pull_request]
 
 jobs:
