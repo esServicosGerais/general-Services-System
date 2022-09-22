@@ -14,7 +14,7 @@ class TrabalhadorsTest < ApplicationSystemTestCase
     visit trabalhadors_url
     click_on "New trabalhador"
 
-    fill_in "Cpf/cnpj", with: @trabalhador.cpf/cnpj
+    fill_in "cpf_or_cnpj", with: @trabalhador.cpf_or_cnpj
     fill_in "Datanascimento", with: @trabalhador.dataNascimento
     fill_in "Email", with: @trabalhador.email
     fill_in "Endereco", with: @trabalhador.endereco_id
@@ -31,7 +31,7 @@ class TrabalhadorsTest < ApplicationSystemTestCase
     visit trabalhador_url(@trabalhador)
     click_on "Edit this trabalhador", match: :first
 
-    fill_in "Cpf/cnpj", with: @trabalhador.cpf/cnpj
+    fill_in "cpf_or_cnpj", with: @trabalhador.cpf_or_cnpj
     fill_in "Datanascimento", with: @trabalhador.dataNascimento
     fill_in "Email", with: @trabalhador.email
     fill_in "Endereco", with: @trabalhador.endereco_id

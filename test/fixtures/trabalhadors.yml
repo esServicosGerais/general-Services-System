@@ -2,7 +2,7 @@
 
 one:
   nome: MyString
-  cpf/cnpj: MyString
+  cpf_or_cnpj: MyString
   telefone: MyString
   email: MyString
   dataNascimento: 2022-09-18
@@ -11,7 +11,7 @@ one:
 
 two:
   nome: MyString
-  cpf/cnpj: MyString
+  cpf_or_cnpj: MyString
   telefone: MyString
   email: MyString
   dataNascimento: 2022-09-18
