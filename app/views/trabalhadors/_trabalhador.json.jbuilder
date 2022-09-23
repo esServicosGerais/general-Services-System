@@ -1,2 +1,2 @@
-json.extract! trabalhador, :id, :nome, :cpf/cnpj, :telefone, :email, :dataNascimento, :profissão, :endereco_id, :created_at, :updated_at
+json.extract! trabalhador, :id, :nome, :cpf_or_cnpj, :telefone, :email, :dataNascimento, :profissão, :endereco_id, :created_at, :updated_at
 json.url trabalhador_url(trabalhador, format: :json)

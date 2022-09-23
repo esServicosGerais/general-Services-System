@@ -65,6 +65,6 @@ class TrabalhadorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def trabalhador_params
-      params.require(:trabalhador).permit(:nome, :cpf/cnpj, :telefone, :email, :dataNascimento, :profissão, :endereco_id)
+      params.require(:trabalhador).permit(:nome, :cpf_or_cnpj, :telefone, :email, :dataNascimento, :profissão, :endereco_id)
     end
 end
