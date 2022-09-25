@@ -6,7 +6,7 @@ one:
   telefone: MyString
   email: MyString
   dataNascimento: 2022-09-18
-  profissão: MyString
+  profissao: MyString
   endereco: one
 
 two:
@@ -15,5 +15,5 @@ two:
   telefone: MyString
   email: MyString
   dataNascimento: 2022-09-18
-  profissão: MyString
+  profissao: MyString
   endereco: two

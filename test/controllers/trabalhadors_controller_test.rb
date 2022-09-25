@@ -17,7 +17,7 @@ class TrabalhadorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create trabalhador" do
     assert_difference("Trabalhador.count") do
-      post trabalhadors_url, params: { trabalhador: { cpf_or_cnpj: @trabalhador.cpf_or_cnpj, dataNascimento: @trabalhador.dataNascimento, email: @trabalhador.email, endereco_id: @trabalhador.endereco_id, nome: @trabalhador.nome, profissão: @trabalhador.profissão, telefone: @trabalhador.telefone } }
+      post trabalhadors_url, params: { trabalhador: { cpf_or_cnpj: @trabalhador.cpf_or_cnpj, dataNascimento: @trabalhador.dataNascimento, email: @trabalhador.email, endereco_id: @trabalhador.endereco_id, nome: @trabalhador.nome, profissao: @trabalhador.profissao, telefone: @trabalhador.telefone } }
     end
 
     assert_redirected_to trabalhador_url(Trabalhador.last)
@@ -34,7 +34,7 @@ class TrabalhadorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update trabalhador" do
-    patch trabalhador_url(@trabalhador), params: { trabalhador: { cpf_or_cnpj: @trabalhador.cpf_or_cnpj, dataNascimento: @trabalhador.dataNascimento, email: @trabalhador.email, endereco_id: @trabalhador.endereco_id, nome: @trabalhador.nome, profissão: @trabalhador.profissão, telefone: @trabalhador.telefone } }
+    patch trabalhador_url(@trabalhador), params: { trabalhador: { cpf_or_cnpj: @trabalhador.cpf_or_cnpj, dataNascimento: @trabalhador.dataNascimento, email: @trabalhador.email, endereco_id: @trabalhador.endereco_id, nome: @trabalhador.nome, profissao: @trabalhador.profissao, telefone: @trabalhador.telefone } }
     assert_redirected_to trabalhador_url(@trabalhador)
   end
 

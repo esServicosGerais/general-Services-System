@@ -6,7 +6,7 @@ class CreateTrabalhadors < ActiveRecord::Migration[7.0]
       t.string :telefone
       t.string :email
       t.date :dataNascimento
-      t.string :profissão
+      t.string :profissao
       t.references :endereco, null: false, foreign_key: true
 
       t.timestamps
