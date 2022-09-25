@@ -19,7 +19,7 @@ class TrabalhadorsTest < ApplicationSystemTestCase
     fill_in "Email", with: @trabalhador.email
     fill_in "Endereco", with: @trabalhador.endereco_id
     fill_in "Nome", with: @trabalhador.nome
-    fill_in "Profissão", with: @trabalhador.profissão
+    fill_in "Profissao", with: @trabalhador.profissao
     fill_in "Telefone", with: @trabalhador.telefone
     click_on "Create Trabalhador"
 
@@ -36,7 +36,7 @@ class TrabalhadorsTest < ApplicationSystemTestCase
     fill_in "Email", with: @trabalhador.email
     fill_in "Endereco", with: @trabalhador.endereco_id
     fill_in "Nome", with: @trabalhador.nome
-    fill_in "Profissão", with: @trabalhador.profissão
+    fill_in "Profissao", with: @trabalhador.profissao
     fill_in "Telefone", with: @trabalhador.telefone
     click_on "Update Trabalhador"
 

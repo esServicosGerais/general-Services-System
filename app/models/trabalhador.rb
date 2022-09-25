@@ -17,7 +17,7 @@ class Trabalhador < ApplicationRecord
 
   validates :dataNascimento, presence: true
 
-  validates :profissão :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
+  validates :profissao, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                                   message: "Campo vazio, ou caracteres inválidos!"}
 
   private

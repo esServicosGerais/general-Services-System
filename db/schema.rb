@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_235906) do
     t.string "telefone"
     t.string "email"
     t.date "dataNascimento"
-    t.string "profissão"
+    t.string "profissao"
     t.integer "endereco_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
