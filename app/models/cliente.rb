@@ -6,7 +6,7 @@ class Cliente < ApplicationRecord
   validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                               message: "Campo vazio, ou caracteres inválidos!"}
 
-  validates :cpf, presence: true, uniqueness: true, length: {is: 11, message: "Precisa ter 11 dígitos"}
+  validates :cpf, presence: true, uniqueness: true
   validate :cpf_valida?
 
   validates :telefone, :format => {with: /(^([0-9]{2}) [0-9]{5}-[0-9]{4}$)/, 
@@ -16,9 +16,10 @@ class Cliente < ApplicationRecord
 
   validates :dataNascimento, presence: true
   
+  private
   def cpf_valida?
     if cpf.present? && !CPF.valid?(cpf)
-      errors.cpf :cpf, "Formato cpf: XXX.XXX.XXX-XX"
+      errors.add :cpf, "Formato cpf: XXX.XXX.XXX-XX"
     end
   end
 
