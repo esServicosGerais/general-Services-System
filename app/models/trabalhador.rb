@@ -1,7 +1,7 @@
 require 'cpf_cnpj'
 
 class Trabalhador < ApplicationRecord
-  has_one :endereco
+  has_one :endereco, dependent: :destroy
   has_many :servicos
 
   validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
