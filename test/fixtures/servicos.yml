@@ -4,10 +4,10 @@ one:
   nome: MyString
   descricao: MyString
   valor: 1.5
-  trabalhador_id: one
+  trabalhador: one
 
 two:
   nome: MyString
   descricao: MyString
   valor: 1.5
-  trabalhador_id: two
+  trabalhador: two

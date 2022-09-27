@@ -1,5 +1,5 @@
 class Servico < ApplicationRecord
-  belongs_to :trabalhador_id
+  belongs_to :trabalhador
 
   validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                                message: "Campo vazio, ou caracteres inválidos!"}
@@ -11,5 +11,4 @@ class Servico < ApplicationRecord
                                                     message: "Use apenas numeros e ponto"}
 
   validates :trabalhador_id, presence: true
-
 end

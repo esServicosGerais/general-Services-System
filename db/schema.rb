@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_27_214235) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_27_225618) do
   create_table "clientes", force: :cascade do |t|
     t.string "nome"
     t.string "cpf"
@@ -30,10 +30,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_27_214235) do
     t.string "nome"
     t.string "descricao"
     t.float "valor"
-    t.integer "trabalhador_id_id", null: false
+    t.integer "trabalhador_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["trabalhador_id_id"], name: "index_servicos_on_trabalhador_id_id"
+    t.index ["trabalhador_id"], name: "index_servicos_on_trabalhador_id"
   end
 
   create_table "trabalhadors", force: :cascade do |t|

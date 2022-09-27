@@ -16,7 +16,7 @@ class ServicosTest < ApplicationSystemTestCase
 
     fill_in "Descricao", with: @servico.descricao
     fill_in "Nome", with: @servico.nome
-    fill_in "Trabalhador id", with: @servico.trabalhador_id_id
+    fill_in "Trabalhador", with: @servico.trabalhador_id
     fill_in "Valor", with: @servico.valor
     click_on "Create Servico"
 
@@ -30,7 +30,7 @@ class ServicosTest < ApplicationSystemTestCase
 
     fill_in "Descricao", with: @servico.descricao
     fill_in "Nome", with: @servico.nome
-    fill_in "Trabalhador id", with: @servico.trabalhador_id_id
+    fill_in "Trabalhador", with: @servico.trabalhador_id
     fill_in "Valor", with: @servico.valor
     click_on "Update Servico"
 
