@@ -1,5 +1,3 @@
-require 'cpf_cnpj'
-
 class Servico < ApplicationRecord
   belongs_to :trabalhador
 
