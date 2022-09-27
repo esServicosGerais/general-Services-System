@@ -52,5 +52,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_27_214235) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "servicos", "trabalhador_ids"
+  add_foreign_key "servicos", "trabalhador_id"
 end
