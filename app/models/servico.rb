@@ -3,7 +3,7 @@ class Servico < ApplicationRecord
 
   validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                                message: "Campo vazio, ou caracteres inválidos!"}
-  
+
   validates :descricao, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                                     message: "Campo não pode ser vazio, ou Caracteres válidos!"}, presence: true
 
