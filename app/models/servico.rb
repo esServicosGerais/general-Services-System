@@ -9,6 +9,8 @@ class Servico < ApplicationRecord
 
   validates :valor, length: {in: 1..100}, format: { with: /\A\d+(?:\.\d{0,2})?\z/,
                                                     message: "Use apenas numeros e ponto"}
-
+  validates :descricao, presence: true
+  validates :valor, presence: true
+  validates :nome, presence: true
   validates :trabalhador_id, presence: true
 end
