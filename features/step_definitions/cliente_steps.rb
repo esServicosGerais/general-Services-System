@@ -89,3 +89,8 @@ end
 Then('eu visualizo o cliente de cpf {string}') do |cpf|
   expect(page).to have_content(cpf)
 end
+
+Then('eu vejo uma mensagem que o formato do campo cpf esta invalido') do
+  expect(page).to have_content('Formato cpf: XXX.XXX.XXX-XX')
+
+end
