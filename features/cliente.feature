@@ -15,8 +15,13 @@ Feature: Cliente
     And o cliente de cpf '427.553.030-69' existe
     When eu clico em editar cliente de cpf '427.553.030-69'
     And eu atualizo o campo com email 'marcossilva@gmail.com'
-    #And eu clico em atualizar cliente
     Then eu vejo que o cliente de cpf '427.553.030-69' foi editado com sucesso
+
+  Scenario: remover cliente
+    Given estou na pagina de cliente
+    And o cliente de cpf '427.553.030-69' existe
+    When eu clico em remover o cliente com cpf '427.553.030-69'
+    Then eu vejo uma mensagem que o cliente foi removido com sucesso
 
 
 

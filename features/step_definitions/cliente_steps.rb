@@ -50,11 +50,16 @@ When('eu atualizo o campo com email {string}') do |email|
   click_button 'Update Cliente'
 end
 
-#When('eu clico em atualizar cliente') do
-#  pending # Write code here that turns the phrase above into concrete actions
-#end
 
 Then('eu vejo que o cliente de cpf {string} foi editado com sucesso') do |cpf|
   expect(page).to have_content(cpf)
+end
+
+When('eu clico em remover o cliente com cpf {string}') do |cpf|
+  click_button 'Destroy this cliente'
+end
+
+Then('eu vejo uma mensagem que o cliente foi removido com sucesso') do
+  expect(page).to have_content('Cliente was successfully destroyed.')
 end
 
