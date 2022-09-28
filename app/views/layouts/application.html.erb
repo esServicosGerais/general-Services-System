@@ -8,9 +8,40 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+        #menu-h ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+    </style>
   </head>
 
   <body>
+    <nav id="menu-h">
+      <ul>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/clientes">
+            Clientes
+          </a>
+        </li>
+        <li>
+          <a href="/trabalhadors">
+            Trabalhadores
+          </a>
+        </li>
+        <li>
+          <a href="/servicos">
+            Serviços
+          </a>
+        </li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

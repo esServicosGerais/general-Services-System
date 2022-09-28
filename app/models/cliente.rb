@@ -8,7 +8,7 @@ class Cliente < ApplicationRecord
   validates :cpf, presence: true, uniqueness: true
   validate :cpf_valida?
 
-  validates :telefone, :format => {with: /(^([0-9]{2}) [0-9]{5}-[0-9]{4}$)/,
+  validates :telefone, :format => {with: /(^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$)/,
                                    message: "Formato do número: (XX) XXXXX-XXXX"}
 
   validates :email, :format => {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create}, uniqueness: true
