@@ -14,17 +14,16 @@ class Cliente < ApplicationRecord
   validates :email, :format => {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create}, uniqueness: true
 
   validates :dataNascimento, presence: true
-
-  #apenas letras, espassadas com um unico espaço, com tamanho minimo 4 é maximo de 30. Por possuir tamanho minomo,campo não pode ser vazio
-  validates :cidade, :format => {:with => /(^([A-Za-z\u00C0-\u017F]\s?){4,30}$)/,
+  
+  validates :cidade, :format => {:with => /(\A([A-Za-z\u00C0-\u017F]\s?){4,30}\z)/,
                                  :message => "Campo vazio, ou caracteres inválidos. Digite somente letras!"}
 
-  validates :logradouro, :format => {:with => /(^([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){4,30}$)/,
+  validates :logradouro, :format => {:with => /(\A([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){4,30}\z)/,
                                      :message => "Campo vazio, ou caracteres inválidos."}
 
-  validates :cep, format: {with: /(^[0-9]{5}-[0-9]{3}$)/, :messege => "digite no formato xxxxx-xxx"}
+  validates :cep, format: {with: /(\A[0-9]{5}-[0-9]{3}\z)/, :messege => "digite no formato xxxxx-xxx"}
 
-  validates :complemento, :format => {:with => /(^([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){,20}$)/,
+  validates :complemento, :format => {:with => /(\A([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){,20}\z)/,
                                       :message => "Digite Caracteres válidos."}
 
   private
