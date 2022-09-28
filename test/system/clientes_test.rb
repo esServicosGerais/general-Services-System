@@ -14,10 +14,14 @@ class ClientesTest < ApplicationSystemTestCase
     visit clientes_url
     click_on "New cliente"
 
+    fill_in "Bairro", with: @cliente.bairro
+    fill_in "Cep", with: @cliente.cep
+    fill_in "Cidade", with: @cliente.cidade
+    fill_in "Complemento", with: @cliente.complemento
     fill_in "Cpf", with: @cliente.cpf
     fill_in "Datanascimento", with: @cliente.dataNascimento
     fill_in "Email", with: @cliente.email
-    fill_in "Endereco", with: @cliente.endereco_id
+    fill_in "Logradouro", with: @cliente.logradouro
     fill_in "Nome", with: @cliente.nome
     fill_in "Telefone", with: @cliente.telefone
     click_on "Create Cliente"
@@ -30,10 +34,14 @@ class ClientesTest < ApplicationSystemTestCase
     visit cliente_url(@cliente)
     click_on "Edit this cliente", match: :first
 
+    fill_in "Bairro", with: @cliente.bairro
+    fill_in "Cep", with: @cliente.cep
+    fill_in "Cidade", with: @cliente.cidade
+    fill_in "Complemento", with: @cliente.complemento
     fill_in "Cpf", with: @cliente.cpf
     fill_in "Datanascimento", with: @cliente.dataNascimento
     fill_in "Email", with: @cliente.email
-    fill_in "Endereco", with: @cliente.endereco_id
+    fill_in "Logradouro", with: @cliente.logradouro
     fill_in "Nome", with: @cliente.nome
     fill_in "Telefone", with: @cliente.telefone
     click_on "Update Cliente"

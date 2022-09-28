@@ -1,24 +1,24 @@
 require 'cpf_cnpj'
 
 class Trabalhador < ApplicationRecord
-  has_one :endereco
-  has_many :servicos
+
+  has_many :servicos, dependent: :destroy
 
   validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
-                              message: "Campo vazio, ou caracteres inválidos!"}
+                               message: "Campo vazio, ou caracteres inválidos!"}
 
   validates :cpf_or_cnpj, presence: true, uniqueness: true
   validate :valida_cpf_and_cnpj?
 
-  validates :telefone, :format => {with: /(^([0-9]{2}) [0-9]{5}-[0-9]{4}$)/, 
-                                  message: "Formato do número: (XX) XXXXX-XXXX"}
-  
+  validates :telefone, :format => {with: /(^([0-9]{2}) [0-9]{5}-[0-9]{4}$)/,
+                                   message: "Formato do número: (XX) XXXXX-XXXX"}
+
   validates :email, :format => {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create}, uniqueness: true
 
   validates :dataNascimento, presence: true
 
   validates :profissao, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
-                                  message: "Campo vazio, ou caracteres inválidos!"}
+                                    message: "Campo vazio, ou caracteres inválidos!"}
 
   private
   def valida_cpf_and_cnpj?
@@ -29,7 +29,7 @@ class Trabalhador < ApplicationRecord
         if !CPF.valid?(cpf_or_cnpj)
           errors.add :cpf_or_cnpj, "CPF inválido, ou Formato cpf: XXX.XXX.XXX-XX"
         end
-        
+
         return
 
       end

@@ -17,7 +17,7 @@
   </div>
 
   <div>
-    <%= form.label "CPF/CNPJ", style: "display: block" %>
+    <%= form.label :cpf_or_cnpj, style: "display: block" %>
     <%= form.text_field :cpf_or_cnpj %>
   </div>
 
@@ -32,18 +32,38 @@
   </div>
 
   <div>
-    <%= form.label "Data Nascimento", style: "display: block" %>
+    <%= form.label :dataNascimento, style: "display: block" %>
     <%= form.date_field :dataNascimento %>
   </div>
 
   <div>
-    <%= form.label "Profissão", style: "display: block" %>
+    <%= form.label :profissao, style: "display: block" %>
     <%= form.text_field :profissao %>
   </div>
 
   <div>
-    <%= form.label :endereco_id, style: "display: block" %>
-    <%= form.text_field :endereco_id %>
+    <%= form.label :cidade, style: "display: block" %>
+    <%= form.text_field :cidade %>
+  </div>
+
+  <div>
+    <%= form.label :bairro, style: "display: block" %>
+    <%= form.text_field :bairro %>
+  </div>
+
+  <div>
+    <%= form.label :logradouro, style: "display: block" %>
+    <%= form.text_field :logradouro %>
+  </div>
+
+  <div>
+    <%= form.label :cep, style: "display: block" %>
+    <%= form.text_field :cep %>
+  </div>
+
+  <div>
+    <%= form.label :complemento, style: "display: block" %>
+    <%= form.text_field :complemento %>
   </div>
 
   <div>

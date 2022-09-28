@@ -10,30 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_18_235906) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_27_225618) do
   create_table "clientes", force: :cascade do |t|
     t.string "nome"
     t.string "cpf"
     t.string "telefone"
     t.string "email"
     t.date "dataNascimento"
-    t.integer "endereco_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["endereco_id"], name: "index_clientes_on_endereco_id"
-  end
-
-  create_table "enderecos", force: :cascade do |t|
-    t.string "cep"
     t.string "cidade"
     t.string "bairro"
     t.string "logradouro"
+    t.string "cep"
     t.string "complemento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "servicos", force: :cascade do |t|
+    t.string "nome"
     t.string "descricao"
     t.float "valor"
     t.integer "trabalhador_id", null: false
@@ -49,13 +43,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_235906) do
     t.string "email"
     t.date "dataNascimento"
     t.string "profissao"
-    t.integer "endereco_id", null: false
+    t.string "cidade"
+    t.string "bairro"
+    t.string "logradouro"
+    t.string "cep"
+    t.string "complemento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["endereco_id"], name: "index_trabalhadors_on_endereco_id"
   end
 
-  add_foreign_key "clientes", "enderecos"
   add_foreign_key "servicos", "trabalhadors"
-  add_foreign_key "trabalhadors", "enderecos"
 end

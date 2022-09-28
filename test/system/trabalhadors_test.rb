@@ -14,10 +14,14 @@ class TrabalhadorsTest < ApplicationSystemTestCase
     visit trabalhadors_url
     click_on "New trabalhador"
 
-    fill_in "cpf_or_cnpj", with: @trabalhador.cpf_or_cnpj
+    fill_in "Bairro", with: @trabalhador.bairro
+    fill_in "Cep", with: @trabalhador.cep
+    fill_in "Cidade", with: @trabalhador.cidade
+    fill_in "Complemento", with: @trabalhador.complemento
+    fill_in "Cpf or cnpj", with: @trabalhador.cpf_or_cnpj
     fill_in "Datanascimento", with: @trabalhador.dataNascimento
     fill_in "Email", with: @trabalhador.email
-    fill_in "Endereco", with: @trabalhador.endereco_id
+    fill_in "Logradouro", with: @trabalhador.logradouro
     fill_in "Nome", with: @trabalhador.nome
     fill_in "Profissao", with: @trabalhador.profissao
     fill_in "Telefone", with: @trabalhador.telefone
@@ -31,10 +35,14 @@ class TrabalhadorsTest < ApplicationSystemTestCase
     visit trabalhador_url(@trabalhador)
     click_on "Edit this trabalhador", match: :first
 
-    fill_in "cpf_or_cnpj", with: @trabalhador.cpf_or_cnpj
+    fill_in "Bairro", with: @trabalhador.bairro
+    fill_in "Cep", with: @trabalhador.cep
+    fill_in "Cidade", with: @trabalhador.cidade
+    fill_in "Complemento", with: @trabalhador.complemento
+    fill_in "Cpf or cnpj", with: @trabalhador.cpf_or_cnpj
     fill_in "Datanascimento", with: @trabalhador.dataNascimento
     fill_in "Email", with: @trabalhador.email
-    fill_in "Endereco", with: @trabalhador.endereco_id
+    fill_in "Logradouro", with: @trabalhador.logradouro
     fill_in "Nome", with: @trabalhador.nome
     fill_in "Profissao", with: @trabalhador.profissao
     fill_in "Telefone", with: @trabalhador.telefone

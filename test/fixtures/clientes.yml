@@ -5,13 +5,21 @@ one:
   cpf: MyString
   telefone: MyString
   email: MyString
-  dataNascimento: 2022-09-18
-  endereco: one
+  dataNascimento: 2022-09-27
+  cidade: MyString
+  bairro: MyString
+  logradouro: MyString
+  cep: MyString
+  complemento: MyString
 
 two:
   nome: MyString
   cpf: MyString
   telefone: MyString
   email: MyString
-  dataNascimento: 2022-09-18
-  endereco: two
+  dataNascimento: 2022-09-27
+  cidade: MyString
+  bairro: MyString
+  logradouro: MyString
+  cep: MyString
+  complemento: MyString
