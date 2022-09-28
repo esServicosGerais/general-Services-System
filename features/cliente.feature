@@ -23,5 +23,13 @@ Feature: Cliente
     When eu clico em remover o cliente com cpf '427.553.030-69'
     Then eu vejo uma mensagem que o cliente foi removido com sucesso
 
+  Scenario: visulizar cliente
+    Given estou na pagina de cliente
+    And o cliente de cpf '716.590.020-95' esta cadastrado
+    And estou na pagina de todos clientes
+    Then eu visualizo o cliente de cpf '716.590.020-95'
+
+
+
 
 
