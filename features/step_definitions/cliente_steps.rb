@@ -56,6 +56,7 @@ Then('eu vejo que o cliente de cpf {string} foi editado com sucesso') do |cpf|
 end
 
 When('eu clico em remover o cliente com cpf {string}') do |cpf|
+  expect(page).to have_content(cpf)
   click_button 'Destroy this cliente'
 end
 
