@@ -14,15 +14,9 @@ class Cliente < ApplicationRecord
   validates :email, :format => {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create}, uniqueness: true
 
   validates :dataNascimento, presence: true
-<<<<<<< HEAD
-
-  validates :cidade, :format => {:with => /(\A([A-Za-z\u00C0-\u017F]\s?){4,30}\z)/,
-                                 :message => "Campo vazio, ou caracteres inválidos. Digite somente letras!"}
-=======
   
   validates :cidade, :format => {with: /(\A([A-Za-z\u00C0-\u017F]\s?){4,30}\z)/,
                                  message: "Campo vazio, ou caracteres inválidos. Digite somente letras!"}
->>>>>>> 4e62d948f4e8965dd8eed72b04db4807e9b8642b
 
   validates :bairro, :format => {with: /\A(([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){4,30})\z/,
                                      message: "Campo vazio, ou caracteres inválidos."}
