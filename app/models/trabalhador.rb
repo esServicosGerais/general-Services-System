@@ -20,6 +20,17 @@ class Trabalhador < ApplicationRecord
   validates :profissao, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                                     message: "Campo vazio, ou caracteres inválidos!"}
 
+  validates :cidade, :format => {:with => /(\A([A-Za-z\u00C0-\u017F]\s?){4,30}\z)/,
+                                 :message => "Campo vazio, ou caracteres inválidos. Digite somente letras!"}
+
+  validates :logradouro, :format => {:with => /(\A([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){4,30}\z)/,
+                                     :message => "Campo vazio, ou caracteres inválidos."}
+
+  validates :cep, format: {with: /(\A[0-9]{5}-[0-9]{3}\z)/, :messege => "digite no formato xxxxx-xxx"}
+
+  validates :complemento, :format => {:with => /(\A([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){,20}\z)/,
+                                      :message => "Digite Caracteres válidos."}
+
   private
   def valida_cpf_and_cnpj?
 
