@@ -18,6 +18,9 @@ class Cliente < ApplicationRecord
   validates :cidade, :format => {with: /(\A([A-Za-z\u00C0-\u017F]\s?){4,30}\z)/,
                                  message: "Campo vazio, ou caracteres inválidos. Digite somente letras!"}
 
+  validates :bairro, :format => {with: /(\A([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){4,30}\z)/,
+                                     message: "Campo vazio, ou caracteres inválidos."}
+
   validates :logradouro, :format => {with: /(\A([A-Za-z0-9\u00C0-\u017F]|,||.|\s?){4,30}\z)/,
                                      message: "Campo vazio, ou caracteres inválidos."}
 
