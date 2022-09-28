@@ -4,7 +4,7 @@ class Trabalhador < ApplicationRecord
 
   has_many :servicos, dependent: :destroy
 
-  validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
+  validates :nome, :format => {with: /(\A([A-Za-z\u00C0-\u017F]\s?){4,50}\z)/,
                                message: "Campo vazio, ou caracteres inválidos!"}
 
   validates :cpf_or_cnpj, presence: true, uniqueness: true
