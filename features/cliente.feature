@@ -10,5 +10,13 @@ Feature: Cliente
     And eu clico em cadastrar novo cliente
     Then eu vejo uma mensagem que o cliente foi cadastrado com sucesso
 
+  Scenario: editar cliente
+    Given estou na pagina de cliente
+    And o cliente de cpf '427.553.030-69' existe
+    When eu clico em editar cliente de cpf '427.553.030-69'
+    And eu atualizo o campo com email 'marcossilva@gmail.com'
+    #And eu clico em atualizar cliente
+    Then eu vejo que o cliente de cpf '427.553.030-69' foi editado com sucesso
+
 
 
