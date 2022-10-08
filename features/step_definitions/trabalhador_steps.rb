@@ -25,10 +25,6 @@ Then('eu vejo uma mensagem que o trabalhador foi cadastrado com sucesso') do
 end
 
 
-Given('estou na pagina de trabalhador') do
-  visit '/trabalhadors'
-end
-
 Given('o trabalhador de cpf_or_cnpj {string} existe') do |string|
   visit 'trabalhadors/new' 
   fill_in 'trabalhador[nome]', :with => 'Iago'
@@ -60,7 +56,7 @@ Then('eu vejo que o trabalhador de cpf_or_cnpj {string} foi editado com sucesso'
   expect(page).to have_content(cpf_or_cnpj)
 end
   
-Given('estou na pagina de todos os trabalhadors') do
+Given('estou na pagina de todos os trabalhadores') do
   visit '/trabalhadors'
 end
 
@@ -81,17 +77,11 @@ Given('o trabalhador de cpf_or_cnpj {string} esta cadastrado') do |string|
   expect(page).to have_content(string)  
 end
 
-Given('estou na pagina de todos trabalhador') do 
-  visit '/trabalhadors'  
-end
 
 Then('eu visualizo o trabalhador de cpf_or_cnpj {string}') do |string|
   expect(page).to have_content(string)
 end
 
-Given('estou na pagina trabalhadors') do 
-  visit '/trabalhadors'  
-end
 
 Given('vejo o trabalhador de cpf_or_cnpj {string}') do |string|
   visit 'trabalhadors/new' 
