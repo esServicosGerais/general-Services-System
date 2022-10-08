@@ -81,7 +81,7 @@ Given('o cliente de cpf {string} esta cadastrado') do |cpf|
 
 end
 
-Given('estou na pagina de todos clientes') do
+Given('estou na pagina de todos os clientes') do
   visit '/clientes'
   expect(page).to have_content('Clientes')
 end
