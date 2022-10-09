@@ -10,22 +10,22 @@ Feature: Trabalhador
     Then eu vejo uma mensagem que o trabalhador foi cadastrado com sucesso
 
   Scenario: editar trabalhador
-    Given estou na pagina de trabalhador
+    Given estou na pagina de todos os trabalhadores
     And o trabalhador de cpf_or_cnpj '090.606.594-14' existe
     When eu clico em editar trabalhador de cpf_or_cnpj '090.606.594-14'
     And eu atualizo o campo do trabalhado com o email 'iago@gmail.com'
     Then eu vejo que o trabalhador de cpf_or_cnpj '090.606.594-14' foi editado com sucesso
 
   Scenario: visualizar trabalhador
-    Given estou na pagina de todos os trabalhadors
+    Given estou na pagina de todos os trabalhadores
     And o trabalhador de cpf_or_cnpj '521.766.904-78' esta cadastrado
-    And estou na pagina de todos trabalhador
+    And estou na pagina de todos os trabalhadores
     Then eu visualizo o trabalhador de cpf_or_cnpj '521.766.904-78'
 
   Scenario: remover trabalhador
-    Given estou na pagina trabalhadors
-    And vejo o trabalhador de cpf_or_cnpj '090.606.644-18'
-    When eu clico em remover o trabalhador com cpf_or_cnpj '090.606.644-18'
+    Given estou na pagina de todos os trabalhadores
+    And vejo o trabalhador de cpf_or_cnpj '741.111.490-14'
+    When eu clico em remover o trabalhador com cpf_or_cnpj '741.111.490-14'
     Then eu vejo uma mensagem que o trabalhador foi removido com sucesso
 
   Scenario: cadastrar trabalhador com cpf invalido
