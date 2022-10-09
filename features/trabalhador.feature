@@ -24,8 +24,8 @@ Feature: Trabalhador
 
   Scenario: remover trabalhador
     Given estou na pagina de todos os trabalhadores
-    And vejo o trabalhador de cpf_or_cnpj '090.606.644-18'
-    When eu clico em remover o trabalhador com cpf_or_cnpj '090.606.644-18'
+    And vejo o trabalhador de cpf_or_cnpj '741.111.490-14'
+    When eu clico em remover o trabalhador com cpf_or_cnpj '741.111.490-14'
     Then eu vejo uma mensagem que o trabalhador foi removido com sucesso
 
   Scenario: cadastrar trabalhador com cpf invalido
