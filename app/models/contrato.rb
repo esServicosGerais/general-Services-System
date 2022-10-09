@@ -6,8 +6,8 @@ class Contrato < ApplicationRecord
   validate :data_valida
 
   def data_valida
-    if data.present? && data < Time.zone.today
-      errors.add(:data, " não pode ser uma data no passado")
+    if dataInicio.present? && dataInicio < Time.zone.today
+      errors.add(:dataInicio, " não pode ser uma data no passado")
     end
   end
 end
