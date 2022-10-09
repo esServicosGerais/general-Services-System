@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_09_121614) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_09_154047) do
+
   create_table "clientes", force: :cascade do |t|
     t.string "nome"
     t.string "cpf"
@@ -24,6 +25,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_121614) do
     t.string "complemento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "contratos", force: :cascade do |t|
+    t.date "dataInicio"
+    t.date "dataTermino"
+    t.float "duracaoTotalServico"
+    t.float "valorTotal"
+    t.integer "situacao"
+    t.integer "cliente_id", null: false
+    t.integer "servico_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_contratos_on_cliente_id"
+    t.index ["servico_id"], name: "index_contratos_on_servico_id"
   end
 
   create_table "servicos", force: :cascade do |t|
@@ -60,5 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_121614) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "contratos", "clientes"
+  add_foreign_key "contratos", "servicos"
   add_foreign_key "servicos", "trabalhadors"
 end
