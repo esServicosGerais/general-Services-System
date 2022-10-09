@@ -1,5 +1,6 @@
 class Servico < ApplicationRecord
-  belongs_to :trabalhador
+  belongs_to :trabalhador, dependent: :destroy
+  has_many :contratos, through: :trabalhador
 
   validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                                message: "Campo vazio, ou caracteres inválidos!"}
