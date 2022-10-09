@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :contratos
+  resources :usuarios
   resources :servicos
   resources :clientes
   resources :trabalhadors
