@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dataInicio: 2022-10-09
+  dataTermino: 2022-10-09
+  duracaoTotalServico: 1.5
+  valorTotal: 1.5
+  situacao: 1
+  cliente: one
+  servico: one
+
+two:
+  dataInicio: 2022-10-09
+  dataTermino: 2022-10-09
+  duracaoTotalServico: 1.5
+  valorTotal: 1.5
+  situacao: 1
+  cliente: two
+  servico: two
