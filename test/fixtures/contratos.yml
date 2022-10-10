@@ -5,7 +5,7 @@ one:
   dataTermino: 2022-10-09
   duracaoTotalServico: 1.5
   valorTotal: 1.5
-  situacao: 1
+  finalizado: false
   cliente: one
   servico: one
 
@@ -14,6 +14,6 @@ two:
   dataTermino: 2022-10-09
   duracaoTotalServico: 1.5
   valorTotal: 1.5
-  situacao: 1
+  finalizado: false
   cliente: two
   servico: two

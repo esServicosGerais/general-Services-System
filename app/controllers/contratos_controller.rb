@@ -60,12 +60,11 @@ class ContratosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contrato
-      user = User.find(session[:user_id])
-      @servico = user.contratos.find(params[:id])
+      @contrato = Contrato.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def contrato_params
-      params.require(:contrato).permit(:dataInicio, :dataTermino, :duracaoTotalServico, :valorTotal, :situacao, :cliente_id, :servico_id)
+      params.require(:contrato).permit(:dataInicio, :dataTermino, :duracaoTotalServico, :valorTotal, :finalizado, :cliente_id, :servico_id)
     end
 end

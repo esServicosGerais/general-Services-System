@@ -18,8 +18,8 @@ class ContratosTest < ApplicationSystemTestCase
     fill_in "Datainicio", with: @contrato.dataInicio
     fill_in "Datatermino", with: @contrato.dataTermino
     fill_in "Duracaototalservico", with: @contrato.duracaoTotalServico
+    check "Finalizado" if @contrato.finalizado
     fill_in "Servico", with: @contrato.servico_id
-    fill_in "Situacao", with: @contrato.situacao
     fill_in "Valortotal", with: @contrato.valorTotal
     click_on "Create Contrato"
 
@@ -35,8 +35,8 @@ class ContratosTest < ApplicationSystemTestCase
     fill_in "Datainicio", with: @contrato.dataInicio
     fill_in "Datatermino", with: @contrato.dataTermino
     fill_in "Duracaototalservico", with: @contrato.duracaoTotalServico
+    check "Finalizado" if @contrato.finalizado
     fill_in "Servico", with: @contrato.servico_id
-    fill_in "Situacao", with: @contrato.situacao
     fill_in "Valortotal", with: @contrato.valorTotal
     click_on "Update Contrato"
 
