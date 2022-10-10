@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <style>
@@ -13,11 +12,10 @@
             display: inline;
             margin-right: 10px;
         }
-
     </style>
   </head>
-
   <body>
+  <% if user_signed_in? && (current_user.tipo.eql? 'admin')  %>
     <nav id="menu-h">
       <ul>
         <li>
@@ -45,11 +43,104 @@
             Usuarios
           </a>
         </li>
+        
+        <li>
+          <%= link_to 'Editar', '/users/edit', method: :get%>
+        </li>    
+
+        <li>
+          <%= link_to 'Sair', destroy_user_session_path, method: :delete%>
+        </li>
+
+
+      </ul>
+    </nav>
+    <%= yield %>
+<% elsif user_signed_in? && (current_user.tipo.eql? 'cliente') %>
+  <nav id="menu-h">
+      <ul>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li>
+        <% @a = Cliente.all%>
+        <% @a.find_by(email: current_user.email).id%>
+          <a href="/clientes/<%= @a.find_by(email: current_user.email).id%>">
+            Clientes
+          </a>
+        </li>
+        <li>
+          <a href="/servicos">
+            Serviços
+          </a>
+        </li>
+        <li>
+          <a href="/usuarios">
+            Usuarios
+          </a>
+        </li>
+        <li>
+          <%= link_to 'Editar', '/users/edit', method: :get%>
+        </li>    
+        <li>
+          <%= link_to 'Sair', destroy_user_session_path, method: :delete%>
+        </li>
+      </ul>
+    </nav>
+    <%= yield %>  
+<% elsif user_signed_in? && (current_user.tipo.eql? 'trabalhador') %>
+  <nav id="menu-h">
+      <ul>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/trabalhadors">
+            Trabalhadores
+          </a>
+        </li>
+        <li>
+          <a href="/servicos">
+            Serviços
+          </a>
+        </li>
+        <li>
+          <a href="/usuarios">
+            Usuarios
+          </a>
+        </li>
+        <li>
+          <%= link_to 'Editar', '/users/edit', method: :get%>
+        </li>    
         <li>
           <%= link_to 'Sair', destroy_user_session_path, method: :delete%>
         </li>
       </ul>
     </nav>
     <%= yield %>
+<% elsif !user_signed_in? %>
+  <nav id="menu-h">
+      <ul>
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/servicos">
+            Serviços
+          </a>
+        </li>   
+        <li>
+          <%= link_to 'Login', '/users/sign_in', method: :delete%>
+        </li>
+      </ul>
+    </nav>
+    <%= yield %>        
+<% end %>
   </body>
 </html>
