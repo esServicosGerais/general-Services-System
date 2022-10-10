@@ -1,4 +1,5 @@
 class ServicosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_servico, only: %i[ show edit update destroy ]
 
   # GET /servicos or /servicos.json

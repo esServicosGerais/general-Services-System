@@ -45,6 +45,9 @@
             Usuarios
           </a>
         </li>
+        <li>
+          <%= link_to 'Sair', destroy_user_session_path, method: :delete%>
+        </li>
       </ul>
     </nav>
     <%= yield %>
