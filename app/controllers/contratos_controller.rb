@@ -1,4 +1,5 @@
 class ContratosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_contrato, only: %i[ show edit update destroy ]
 
   # GET /contratos or /contratos.json
