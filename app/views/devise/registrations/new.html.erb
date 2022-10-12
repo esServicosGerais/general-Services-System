@@ -10,7 +10,7 @@
 
   <div class="field">
     <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
+    <%= f.select :tipo, options_for_select(["admin", "trabalhador", "cliente"], selected: f.object.tipo), {class: 'form-control'} %>
   </div>
 
   <div class="field">
