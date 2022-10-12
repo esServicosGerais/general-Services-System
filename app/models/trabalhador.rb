@@ -1,7 +1,7 @@
 require 'cpf_cnpj'
 
 class Trabalhador < ApplicationRecord
-
+  has_one :user
   has_many :servicos, dependent: :destroy
 
   validates :nome, :format => {with: /(\A([A-Za-z\u00C0-\u017F]\s?){4,50}\z)/,
