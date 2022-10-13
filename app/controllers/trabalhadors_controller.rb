@@ -26,7 +26,7 @@ class TrabalhadorsController < ApplicationController
 
     respond_to do |format|
       if @trabalhador.save
-        format.html { redirect_to trabalhador_url(@trabalhador), notice: "Trabalhador was successfully created." }
+        format.html { redirect_to trabalhador_url(@trabalhador), notice: "Trabalhador cadastrado com sucesso." }
         format.json { render :show, status: :created, location: @trabalhador }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -66,6 +66,6 @@ class TrabalhadorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def trabalhador_params
-      params.require(:trabalhador).permit(:nome, :cpf_or_cnpj, :telefone, :email, :dataNascimento, :profissao, :cidade, :bairro, :logradouro, :cep, :complemento)
+      params.require(:trabalhador).permit(:nome, :cpf_or_cnpj, :telefone, :email, :dataNascimento, :profissao, :cidade, :bairro, :logradouro, :cep, :complemento, :user_id)
     end
 end
