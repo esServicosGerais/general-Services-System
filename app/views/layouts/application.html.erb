@@ -62,7 +62,7 @@
         </li>
         <li>
           <% @clientes = Cliente.all%>
-          <% if !@clientes.length().eql? 0 %>
+          <% if !@clientes.find_by(email: current_user.email).eql? nil %>
             <a href="/clientes/<%= @clientes.find_by(email: current_user.email).id %>">
               Cliente
             </a>
@@ -96,7 +96,7 @@
         </li>
         <li>
           <% @trabalhador = Trabalhador.all%>
-          <% if !@trabalhador.length().eql? 0 %>
+          <% if !@trabalhador.find_by(email: current_user.email).eql? nil %>
             <a href="/trabalhadors/<%= @trabalhador.find_by(email: current_user.email).id %>">
               Trabalhador
             </a>
