@@ -26,10 +26,14 @@
     <%= form.text_field :telefone %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
+  <% if user_signed_in? && (current_user.tipo.eql? 'trabalhador') %>
+    <%= form.text_field :email, value: current_user.email, style: "display: none" %>
+  <% else %>
+    <div>
+      <%= form.label :email, style: "display: block" %>
+      <%= form.text_field :email %>
+    </div>
+  <% end %>
 
   <div>
     <%= form.label :dataNascimento, style: "display: block" %>
@@ -65,6 +69,8 @@
     <%= form.label :complemento, style: "display: block" %>
     <%= form.text_field :complemento %>
   </div>
+
+  <%= form.text_field :user_id, value: current_user.id, style: "display: none" %>
 
   <div>
     <%= form.submit %>

@@ -3,8 +3,11 @@
 <%= render @cliente %>
 
 <div>
-  <%= link_to "Edit this cliente", edit_cliente_path(@cliente) %> |
-  <%= link_to "Back to clientes", clientes_path %>
+  <%= link_to "Edit this cliente", edit_cliente_path(@cliente) %>
+  <% if user_signed_in? && (current_user.tipo.eql? 'admin') %>
+    |
+    <%= link_to "Back to clientes", clientes_path %>
+  <% end %>
 
   <%= button_to "Destroy this cliente", @cliente, method: :delete %>
 </div>

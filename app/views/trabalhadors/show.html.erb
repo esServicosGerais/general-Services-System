@@ -3,8 +3,12 @@
 <%= render @trabalhador %>
 
 <div>
-  <%= link_to "Edit this trabalhador", edit_trabalhador_path(@trabalhador) %> |
-  <%= link_to "Back to trabalhadors", trabalhadors_path %>
+  <%= link_to "Edit this trabalhador", edit_trabalhador_path(@trabalhador) %>
+  <% if user_signed_in? && (current_user.tipo.eql? 'admin') %>
+    |
+    <%= link_to "Back to trabalhadors", trabalhadors_path %>
+  <% end %>
 
   <%= button_to "Destroy this trabalhador", @trabalhador, method: :delete %>
+
 </div>
