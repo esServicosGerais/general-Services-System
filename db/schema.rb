@@ -22,8 +22,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_002411) do
     t.string "logradouro"
     t.string "cep"
     t.string "complemento"
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_clientes_on_user_id"
   end
 
   create_table "contratos", force: :cascade do |t|
@@ -60,8 +62,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_002411) do
     t.string "logradouro"
     t.string "cep"
     t.string "complemento"
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_trabalhadors_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -85,7 +89,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_002411) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "clientes", "users"
   add_foreign_key "contratos", "clientes"
   add_foreign_key "contratos", "servicos"
   add_foreign_key "servicos", "trabalhadors"
+  add_foreign_key "trabalhadors", "users"
 end
