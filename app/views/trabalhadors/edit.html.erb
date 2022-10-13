@@ -5,6 +5,9 @@
 <br>
 
 <div>
-  <%= link_to "Show this trabalhador", @trabalhador %> |
-  <%= link_to "Back to trabalhadors", trabalhadors_path %>
+  <%= link_to "Show this trabalhador", @trabalhador %>
+  <% if user_signed_in? && (current_user.tipo.eql? 'admin') %>
+    |
+    <%= link_to "Back to trabalhadors", trabalhadors_path %>
+  <% end %>
 </div>

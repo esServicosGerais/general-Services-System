@@ -44,20 +44,11 @@
           </a>
         </li>
         <li>
-          <a href="/usuarios">
-            Usuarios
-          </a>
+          <%= link_to 'Editar usuário', '/users/edit', method: :get%>
         </li>
-        
-        <li>
-          <%= link_to 'Editar', '/users/edit', method: :get%>
-        </li>    
-
         <li>
           <%= link_to 'Sair', destroy_user_session_path, method: :delete%>
         </li>
-
-
       </ul>
     </nav>
     <%= yield %>
@@ -70,13 +61,9 @@
           </a>
         </li>
         <li>
-          <a href="/clientes/<%= current_user.id %>">
-            Clientes
-          </a>
-        </li>
-        <li>
-          <a href="/servicos/">
-            Serviços
+          <% @cliente = Cliente.all%>
+          <a href="/clientes/<%= @cliente.find_by(email: current_user.email).id %>">
+            Cliente
           </a>
         </li>
         <li>
@@ -85,12 +72,7 @@
           </a>
         </li>
         <li>
-          <a href="/usuarios">
-            Usuarios
-          </a>
-        </li>
-        <li>
-          <%= link_to 'Editar', '/users/edit', method: :get%>
+          <%= link_to 'Editar usuário', '/users/edit', method: :get%>
         </li>    
         <li>
           <%= link_to 'Sair', destroy_user_session_path, method: :delete%>
@@ -107,8 +89,9 @@
           </a>
         </li>
         <li>
-          <a href="/trabalhadors">
-            Trabalhadores
+          <% @trabalhador = Trabalhador.all%>
+          <a href="/trabalhadors/<%= @trabalhador.find_by(email: current_user.email).id %>">
+            Trabalhador
           </a>
         </li>
         <li>
@@ -117,12 +100,7 @@
           </a>
         </li>
         <li>
-          <a href="/usuarios">
-            Usuarios
-          </a>
-        </li>
-        <li>
-          <%= link_to 'Editar', '/users/edit', method: :get%>
+          <%= link_to 'Editar usuário', '/users/edit', method: :get%>
         </li>    
         <li>
           <%= link_to 'Sair', destroy_user_session_path, method: :delete%>
