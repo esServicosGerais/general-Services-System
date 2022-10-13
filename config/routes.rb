@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :contratos
   devise_for :users
-  resources :usuarios
   resources :servicos
   resources :clientes
   resources :trabalhadors
