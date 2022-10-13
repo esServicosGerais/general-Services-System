@@ -15,10 +15,8 @@ class ContratosTest < ApplicationSystemTestCase
     click_on "New contrato"
 
     fill_in "Cliente", with: @contrato.cliente_id
-    fill_in "Datainicio", with: @contrato.dataInicio
-    fill_in "Datatermino", with: @contrato.dataTermino
-    fill_in "Duracaototalservico", with: @contrato.duracaoTotalServico
-    check "Finalizado" if @contrato.finalizado
+    fill_in "Data", with: @contrato.data
+    fill_in "Duracao", with: @contrato.duracao
     fill_in "Servico", with: @contrato.servico_id
     fill_in "Valortotal", with: @contrato.valorTotal
     click_on "Create Contrato"
@@ -32,10 +30,8 @@ class ContratosTest < ApplicationSystemTestCase
     click_on "Edit this contrato", match: :first
 
     fill_in "Cliente", with: @contrato.cliente_id
-    fill_in "Datainicio", with: @contrato.dataInicio
-    fill_in "Datatermino", with: @contrato.dataTermino
-    fill_in "Duracaototalservico", with: @contrato.duracaoTotalServico
-    check "Finalizado" if @contrato.finalizado
+    fill_in "Data", with: @contrato.data
+    fill_in "Duracao", with: @contrato.duracao
     fill_in "Servico", with: @contrato.servico_id
     fill_in "Valortotal", with: @contrato.valorTotal
     click_on "Update Contrato"

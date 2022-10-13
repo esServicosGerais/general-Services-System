@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :trabalhador_id, style: "display: block" %>
-    <%= form.text_field :trabalhador_id %>
+    <%= collection_select(:servico, :trabalhador_id, Trabalhador.all, :id, :nome)  %>
   </div>
 
   <div>

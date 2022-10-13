@@ -12,38 +12,29 @@
   <% end %>
 
   <div>
-    <%= form.label :dataInicio, style: "display: block" %>
-    <%= form.date_field :dataInicio %>
+    <%= form.label :data, style: "display: block" %>
+    <%= form.date_field :data %>
   </div>
 
   <div>
-    <%= form.label :dataTermino, style: "display: block" %>
-    <%= form.date_field :dataTermino %>
-  </div>
-
-  <div>
-    <%= form.label :duracaoTotalServico, style: "display: block" %>
-    <%= form.text_field :duracaoTotalServico %>
+    <%= form.label :duracao, style: "display: block" %>
+    <%= form.text_field :duracao %>
   </div>
 
   <div>
     <%= form.label :valorTotal, style: "display: block" %>
     <%= form.text_field :valorTotal %>
-  </div>
 
-  <div>
-    <%= form.label :finalizado, style: "display: block" %>
-    <%= form.check_box :finalizado %>
   </div>
 
   <div>
     <%= form.label :cliente_id, style: "display: block" %>
-    <%= form.text_field :cliente_id %>
+    <%= collection_select(:contrato, :cliente_id, Cliente.all, :id, :nome) %>
   </div>
 
   <div>
     <%= form.label :servico_id, style: "display: block" %>
-    <%= form.text_field :servico_id %>
+    <%= collection_select(:contrato, :servico_id, Servico.all, :id, :nome) %>
   </div>
 
   <div>

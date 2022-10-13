@@ -1,8 +1,8 @@
 require 'cpf_cnpj'
 
 class Cliente < ApplicationRecord
-  has_many :contratoes, dependent: :destroy
-  has_one :user
+  has_many :contratos, dependent: :destroy
+  #has_one :user
 
   validates :nome, :format => {with: /(^([A-Za-z\u00C0-\u017F]\s?){4,50}$)/,
                                message: "Campo vazio, ou caracteres inválidos!"}

@@ -39,6 +39,11 @@
           </a>
         </li>
         <li>
+          <a href="/contratos">
+            Contratos
+          </a>
+        </li>
+        <li>
           <%= link_to 'Editar usuário', '/users/edit', method: :get%>
         </li>
         <li>
@@ -58,7 +63,12 @@
         <li>
           <% @cliente = Cliente.all%>
           <a href="/clientes/<%= @cliente.find_by(email: current_user.email).id %>">
-            Clientes
+            Cliente
+          </a>
+        </li>
+        <li>
+          <a href="/contratos">
+            Contratos
           </a>
         </li>
         <li>

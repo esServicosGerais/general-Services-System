@@ -17,7 +17,7 @@ class ContratosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create contrato" do
     assert_difference("Contrato.count") do
-      post contratos_url, params: { contrato: { cliente_id: @contrato.cliente_id, dataInicio: @contrato.dataInicio, dataTermino: @contrato.dataTermino, duracaoTotalServico: @contrato.duracaoTotalServico, finalizado: @contrato.finalizado, servico_id: @contrato.servico_id, valorTotal: @contrato.valorTotal } }
+      post contratos_url, params: { contrato: { cliente_id: @contrato.cliente_id, data: @contrato.data, duracao: @contrato.duracao, servico_id: @contrato.servico_id, valorTotal: @contrato.valorTotal } }
     end
 
     assert_redirected_to contrato_url(Contrato.last)
@@ -34,7 +34,7 @@ class ContratosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update contrato" do
-    patch contrato_url(@contrato), params: { contrato: { cliente_id: @contrato.cliente_id, dataInicio: @contrato.dataInicio, dataTermino: @contrato.dataTermino, duracaoTotalServico: @contrato.duracaoTotalServico, finalizado: @contrato.finalizado, servico_id: @contrato.servico_id, valorTotal: @contrato.valorTotal } }
+    patch contrato_url(@contrato), params: { contrato: { cliente_id: @contrato.cliente_id, data: @contrato.data, duracao: @contrato.duracao, servico_id: @contrato.servico_id, valorTotal: @contrato.valorTotal } }
     assert_redirected_to contrato_url(@contrato)
   end
 
