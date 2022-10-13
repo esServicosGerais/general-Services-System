@@ -61,10 +61,16 @@
           </a>
         </li>
         <li>
-          <% @cliente = Cliente.all%>
-          <a href="/clientes/<%= @cliente.find_by(email: current_user.email).id %>">
-            Cliente
-          </a>
+          <% @clientes = Cliente.all%>
+          <% if !@clientes.find_by(email: current_user.email).eql? nil %>
+            <a href="/clientes/<%= @clientes.find_by(email: current_user.email).id %>">
+              Cliente
+            </a>
+          <% else %>
+            <a href="/clientes">
+              Cliente
+            </a>
+          <% end %>
         </li>
         <li>
           <a href="/contratos">
@@ -90,9 +96,15 @@
         </li>
         <li>
           <% @trabalhador = Trabalhador.all%>
-          <a href="/trabalhadors/<%= @trabalhador.find_by(email: current_user.email).id %>">
-            Trabalhador
-          </a>
+          <% if !@trabalhador.find_by(email: current_user.email).eql? nil %>
+            <a href="/trabalhadors/<%= @trabalhador.find_by(email: current_user.email).id %>">
+              Trabalhador
+            </a>
+          <% else %>
+            <a href="/trabalhadors">
+              Trabalhador
+            </a>
+          <% end %>
         </li>
         <li>
           <a href="/servicos">
