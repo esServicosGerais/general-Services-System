@@ -12,7 +12,7 @@ class CreateTrabalhadors < ActiveRecord::Migration[7.0]
       t.string :logradouro
       t.string :cep
       t.string :complemento
-      t.references :user, null: false, foreign_key: true
+      #t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

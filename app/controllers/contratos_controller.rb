@@ -1,5 +1,4 @@
 class ContratosController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_contrato, only: %i[ show edit update destroy ]
 
   # GET /contratos or /contratos.json
@@ -66,6 +65,6 @@ class ContratosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contrato_params
-      params.require(:contrato).permit(:dataInicio, :dataTermino, :duracaoTotalServico, :valorTotal, :finalizado, :cliente_id, :servico_id)
+      params.require(:contrato).permit(:data, :duracao, :valorTotal, :cliente_id, :servico_id)
     end
 end
