@@ -80,6 +80,6 @@ group :test do
 end
 
 group :actions do
-  #gem 'pg'
-  #gem 'activerecord-postgresql-adapter'
+  gem 'pg'
+  gem 'activerecord-postgresql-adapter'
 end
